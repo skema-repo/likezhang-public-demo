@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package aaaa.bbbb;
+
+option go_package="github.com/skema-repo/likezhang-public-demo/aaa/grpc-go/aaaa/bbbb";
+
+
+service Test1 {
+    rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+
+message HelloRequest {
+    string msg = 1;
+}
+message HelloReply {
+    string msg = 1;
+    string code = 2;
+}
